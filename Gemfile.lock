@@ -1,0 +1,30 @@
+PATH
+  remote: .
+  specs:
+    jsdebug-rails (0.1.0)
+      sprockets (= 2.0.0.beta.10)
+      thor (~> 0.14)
+      tilt (~> 1.1, != 1.3.0)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    hike (1.1.0)
+    mocha (0.9.8)
+      rake
+    rack (1.3.0)
+    rake (0.9.2)
+    sprockets (2.0.0.beta.10)
+      hike (~> 1.0)
+      rack (~> 1.0)
+      tilt (!= 1.3.0, ~> 1.1)
+    thor (0.14.6)
+    tilt (1.3.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bundler (>= 1.0.0.rc.6)
+  jsdebug-rails!
+  mocha (= 0.9.8)
