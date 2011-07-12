@@ -1,10 +1,10 @@
-require "jsdebug/version"
 
 module Jsdebug
   module Rails
-    autoload :DirectiveProcessor,           "jsdebug/directive_processor"
-    autoload :Processor,                    "jsdebug/processor"
-    autoload :Railtie,                      "jsdebug/railtie"
+    require 'jsdebug/directive_processor'
+    require 'jsdebug/processor'
+    require 'jsdebug/railtie'
+    require "jsdebug/version"
   end
 end
 
