@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
   s.rubyforge_project         = "jsdebug-rails"
 
   s.add_dependency "tilt", ["~> 1.1", "!= 1.3.0"]
-  s.add_dependency "sprockets", "~>2.0.0"
+  s.add_dependency "sprockets", "~>2.0"
   s.add_dependency "thor",     "~> 0.14"
 
   s.add_development_dependency "mocha", "= 0.9.8"
