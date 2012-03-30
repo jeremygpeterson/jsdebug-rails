@@ -12,13 +12,13 @@ class DirectiveProcessorTest < Sprockets::TestCase
   test "directive processor in development environment" do
     Rails.stubs(:env).returns("development")
 
-    assert_equal "var foo = {};\nwindow.debug = {};\n", @env['application.js'].to_s
+    assert_equal "var foo = {};\nwindow.debug = {};\n\n\n", @env['application.js'].to_s
   end
 
   test "directive processor in production environment" do
     Rails.stubs(:env).returns("production")
 
-    assert_equal "var foo = {};\n", @env['application.js'].to_s
+    assert_equal "var foo = {};\n\n\n", @env['application.js'].to_s
   end
 
 end
