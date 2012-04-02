@@ -1,8 +1,8 @@
 PATH
   remote: .
   specs:
-    jsdebug-rails (0.2.0)
-      rails (~> 3.2)
+    jsdebug-rails (0.3.1)
+      rails (~> 3.1)
       thor (~> 0.14)
 
 GEM
