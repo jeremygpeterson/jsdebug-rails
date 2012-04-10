@@ -41,4 +41,14 @@ class JsdebugProcessorTest < Sprockets::TestCase
     assert_equal "var str = \"Hello\";\n// debug_start\nstr = str + \" World!\";\ndebug.log('[block_debugs::4]', str);\n// debug_end\nvar str2 = \"Bye\";\n", @env['block_debugs.js'].to_s
   end
 
+  test "javascript compiles without passthrough debug statements" do
+    @logger.stubs(:level).returns(1)
+    assert_equal "var foo = {},\nbar = {};\n", @env['pass_debugs.js'].to_s
+  end
+
+  test "javascript compiles with passthrough debug statements" do
+    @logger.stubs(:level).returns(0)
+    assert_equal "debug.group('test');\nvar foo = {},\nbar = {};\ndebug.groupEnd();\n", @env['pass_debugs.js'].to_s
+  end
+
 end
