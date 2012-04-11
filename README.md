@@ -48,7 +48,11 @@ To test, change development.rb
 
      config.log_level = :info
 
+# Contributors
+Marc Leglise
+
 ## History
 * 0.1.0 Initial Release
 * 0.2.0 Updating for Rails 3.1
 * 0.3.0 Updating for Rails 3.2
+* 0.3.2 Bug fixes
