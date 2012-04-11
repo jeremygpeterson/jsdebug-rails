@@ -37,9 +37,13 @@ module Jsdebug
         data.each_line do |line|
           index += 1
 
-          if(is_jsdebug_allowed? && line.match(log_regex))
-            cmd = line.scan(log_regex).first
-            new_data << line.gsub(cmd, "#{cmd}'[#{name}::#{index}]', ")
+          if(is_jsdebug_allowed? && line.match(debug_regex))
+            if line.match(log_regex)
+              cmd = line.scan(log_regex).first
+              new_data << line.gsub(cmd, "#{cmd}'[#{name}::#{index}]', ")
+            else
+              new_data << line
+            end
           else
             if (!is_jsdebug_allowed?)
               if line.match(/debug_start/)
